@@ -19,10 +19,10 @@ class Student(models.Model):
 
 
 class TextAnswer(models.Model):
-	answer = models.CharField(name='Ответ', max_length=255)
+	answer = models.CharField('Ответ', max_length=255)
 
 	def __str__(self):
-		return f'Ответ - '
+		return f'Ответ - {self.answer}'
 
 	class Meta:
 		verbose_name = 'Ответ'
@@ -31,11 +31,10 @@ class TextAnswer(models.Model):
 
 class Question(models.Model):
 	answer = models.ForeignKey(TextAnswer, on_delete=models.DO_NOTHING)
-
-	question = models.TextField(name='Вопрос')
+	question = models.TextField('Вопрос')
 
 	def __str__(self):
-		return f'Вопрос - '
+		return f'Вопрос - {self.question}'
 
 	class Meta:
 		verbose_name = 'Вопрос'
