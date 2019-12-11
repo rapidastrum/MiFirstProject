@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>
-            {% block title%}{% endblock %}
+            Start test
         </title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
@@ -37,24 +37,6 @@
         </style>
     </head>
     <body class="text-center">
-        <div class="card">
-            <div class="card-body">
-                <div id="question" style="display:block;">
-                    <p>
-                        {% block headtitle%}{% endblock %}
-                    </p>
-                    <div class="alert alert-secondary" role="alert">
-                        <p>
-                            <span id="v_1">
-                                {% if question %}
-                                    {{question.question}}
-                                {% endif %}
-                            </span>
-                            <input class="form-control" type="text" id="z_1"></p>
-                    </div>
-                </div>
-                <button id="kn_sl" class="btn btn-lg btn-primary btn-block" style="margin-left:auto;margin-right:auto;width:250px;" onclick="location.href='{% url 'opros:get_question' %}'">Следующий вопрос</button>
-            </div>
-        </div>
+        <a href="{% url 'opros:get_question' %}">START</a>
     </body>
 </html>
