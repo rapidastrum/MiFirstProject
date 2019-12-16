@@ -1,8 +1,4 @@
 
 .idea/
 
-MiFirstProject/__pycache__/
-
-opros/__pycache__/
-
-opros/migrations/__pycache__/
+*__pycache__/
